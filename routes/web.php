@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\WebhookController;
 
 /*
@@ -19,3 +20,4 @@ use App\Http\Controllers\WebhookController;
 // });
 
 Route::any('/webhook/{hook}', WebhookController::class)->name('webhook');
+Route::get('/v/{path}', VideoController::class)->name('video');
